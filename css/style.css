@@ -120,3 +120,33 @@ html {
     background: skyblue;
     z-index: 11;
   }
+
+  .hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #000000;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
+  .hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+  }
+  
+  .hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+  }
+  
+  .hand.second-hand {
+    background: #e91e63;
+    width: 45%;
+    height: 2px;
+  }
