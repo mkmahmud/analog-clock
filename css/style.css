@@ -1,0 +1,65 @@
+html {
+    background: #9e9e9e;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
+  
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    padding: 2rem;
+    border: 7px solid #9e9e9e;
+    border-radius: 50%;
+    margin: 50px auto;
+    animation: clock 5s infinite alternate;
+  }
+
+
+  @keyframes clock {
+    0%{
+        box-shadow: -4px -4px 10px #e91e63, inset 4px 4px 10px #ff5722, inset -4px -4px 10px #9c27b0, 4px 4px 10px #ffc107;
+    }
+    50%{
+        box-shadow: -4px -4px 10px #e91ece, inset 4px 4px 10px #130602, inset -4px -4px 10px #338605, 4px 4px 10px #0b07ff;
+    }
+    100%{
+        box-shadow: -4px -4px 10px #78676d, inset 4px 4px 10px #8f2708, inset -4px -4px 10px #27a7b0, 4px 4px 10px #f00000;
+    }
+  }
+
+  .outer-clock-face {
+    position: relative;
+    background: #9e9e9e;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  
+  .outer-clock-face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  
+  .outer-clock-face::after,
+  .outer-clock-face::before,
+  .outer-clock-face .marking{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #e91e63;
+    z-index: 0;
+    left: 49%;
+  }
